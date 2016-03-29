@@ -55,7 +55,7 @@ func toUInt32Array(slice: ArraySlice<Byte>) -> Array<UInt32> {
     return result
 }
 
-func xor(a: [Byte], _ b:[Byte]) -> [Byte] {
+public func xor(a: [Byte], _ b:[Byte]) -> [Byte] {
     var xored = [Byte](repeating: 0, count: min(a.count, b.count))
     for i in 0..<xored.count {
         xored[i] = a[i] ^ b[i]
