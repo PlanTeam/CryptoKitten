@@ -18,7 +18,7 @@ public final class PBKDF2 {
     }
     
     /// Applies the `hi` (PBKDF2 with HMAC as PseudoRandom Function)
-    public func calculate(password: String, salt: [Byte], iterations: Int, variant: HMAC.Variant = .sha1) throws -> [Byte] {
+    public static func calculate(password: String, salt: [Byte], iterations: Int, variant: HMAC.Variant = .sha1) throws -> [Byte] {
         var salt = salt
         salt.append(contentsOf:)(contentsOf: [0, 0, 0, 1])
         
